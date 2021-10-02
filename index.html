@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Travel Out</title>
 </head>
+
 <body>
     <!--everything will be showcase except the menu-->
     <section class="showcase ">
@@ -15,55 +17,64 @@
             <div class="toggle "></div>
         </header>
 
-       <video src="4.mp4" muted loop autoplay></video>
+        <video src="4.mp4" muted loop autoplay></video>
 
         <div class="overlay"></div>
 
-        <div class="text">
+        <div class="text" id="reveal">
             <h2>Never Stop</h2>
             <h3>Exploring The World</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quibusdam molestiae voluptates distinctio enim non quod temporibus vel minus suscipit?</p>
-            <a href="#">Explore</a>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quibusdam molestiae voluptates
+                distinctio enim non quod temporibus vel minus suscipit?</p>
+            <a href="#" id="cta_button">Explore</a>
         </div>
 
-     <!-- <ul class="social">  
+        <!-- <ul class="social">  
                 <li><a href="#"><img class="facebook" src="facebook.png" alt=""></a></li>
                 <li><a href="#"><img class="twitter" src="twitter.png" alt=""></a></li>
                 <li><a href="#"><img class="insta" src="instagram.png" alt=""></a></li>
             </ul>  -->
-            <div class="social_logos">
-                <div>
-                    <img class="facebook" src="facebook.png" alt="">
-                </div>
-                <div>
-                    <img class="twitter" src="twitter.png" alt="">
-                </div>
-                <div>
-                    <img class="insta" src="instagram.png" alt="">
-                </div>
+        <div class="social_logos">
+            <div>
+                <img class="facebook" src="facebook.png" alt="">
             </div>
-
-        </section>
-
-        <div class="menu">
-            <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">News</a></li>
-             <li><a href="#">Destination</a></li>
-             <li><a href="#">Blog</a></li>
-             <li><a href="#">Contact</a></li>
-            </ul>
+            <div>
+                <img class="twitter" src="twitter.png" alt="">
+            </div>
+            <div>
+                <img class="insta" src="instagram.png" alt="">
+            </div>
         </div>
 
-        <script>
-         const menuToggle = document.querySelector('.toggle')
-         const showcase = document.querySelector('.showcase')
+    </section>
 
-            menuToggle.addEventListener('click', () => {
-           menuToggle.classList.toggle('active')
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
             showcase.classList.toggle('active')
 
- });
-         </script>
+        });
+
+        // reveal animation
+        const text_reveal=document.getElementById('reveal')
+        setTimeout(()=>{
+            text_reveal.classList.add('text_reveal');
+        },2000)
+        
+    </script>
 </body>
+
 </html>
